@@ -11,7 +11,14 @@ public class Junit4Test {
         System.out.println("Running Test2");
     }
 
+    @ElapsedTime
     public void testThree() throws Exception {
         System.out.println("Running Test3");
+    }
+
+    @ElapsedTime
+    public void longTimeFunc() throws InterruptedException {
+        Thread.sleep(500);
+        System.out.println("a few seconds later...");
     }
 }
